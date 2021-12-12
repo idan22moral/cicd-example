@@ -21,7 +21,7 @@ class MathTest(unittest.TestCase):
          for a in range(10 ** 3) for b in range(10 ** 3)]
 
     def test_avg(self):
-        [self.assertEqual(example.avg(a, b), (a + b) / 3)
+        [self.assertEqual(example.avg(a, b), (a + b) / 2)
          for a in range(10 ** 3) for b in range(10 ** 3)]
 
 
