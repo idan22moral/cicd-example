@@ -4,7 +4,7 @@ import unittest
 
 class MathTest(unittest.TestCase):
     def test_mul(self):
-        [self.assertEqual(example.mul(a, b), a * b, f'{a} * {b}')
+        [self.assertEqual(example.mul(a, b), a * b)
          for a in range(10 ** 3) for b in range(10 ** 3)]
 
     def test_div(self):
