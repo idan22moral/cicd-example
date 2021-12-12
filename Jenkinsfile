@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                def img = docker.build("cicd-img", "./Dockerfile")
                 echo 'Building..'
             }
         }
