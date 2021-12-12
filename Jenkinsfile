@@ -1,22 +1,11 @@
 pipeline {
-    agent any
-
-    stages {
-        stage('Build') {
-            steps {
-                def img = docker.build("cicd-img", "./Dockerfile")
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
+    node {
+        checkout scm
+    
+        def customImage = docker.build("image", "./Dockerfile")
+    
+        customImage.inside {
+            sh 'echo 123'
         }
     }
 }
