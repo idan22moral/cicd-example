@@ -12,3 +12,7 @@ def sum(a, b):
 
 def sub(a, b):
     return a - b
+
+
+def avg(a, b):
+    return sum(a, b) / 2
