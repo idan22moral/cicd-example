@@ -9,4 +9,5 @@ jobs:
         python-version: [3.8, 3.9, 3.10]
     steps:
       - run: |
+          pwd
           python -m unittest test_example
